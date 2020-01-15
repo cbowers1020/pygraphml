@@ -19,6 +19,7 @@ class Node(Item):
         super(Node, self).__init__(id)
 
         self._edges = []
+        self._attr = {}
 
     def edges(self, ):
         """
@@ -49,3 +50,11 @@ class Node(Item):
 
         return parent
 
+    def add_attribute(self, name, value):
+        """
+        Add an attribute to the node
+        :param name: name of parameter
+        :param value: value of parameter
+        :return:
+        """
+        self._attr[name] = value
